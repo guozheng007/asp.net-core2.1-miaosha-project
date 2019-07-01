@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SpikeDB\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spike.DataContracts\Spike.DataContracts.csproj" />
+    <ProjectReference Include="..\Spike.Utility\Spike.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

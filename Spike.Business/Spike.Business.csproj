@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Convert\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Logic\" />
+    <Folder Include="Verify\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Spike.BO\Spike.BO.csproj" />
+    <ProjectReference Include="..\Spike.DataContracts\Spike.DataContracts.csproj" />
+    <ProjectReference Include="..\Spike.DTO\Spike.DTO.csproj" />
+    <ProjectReference Include="..\Spike.MySQLDB\Spike.MySQLDB.csproj" />
+    <ProjectReference Include="..\Spike.RedisDB\Spike.RedisDB.csproj" />
+    <ProjectReference Include="..\Spike.Utility\Spike.Utility.csproj" />
+  </ItemGroup>
+
+</Project>

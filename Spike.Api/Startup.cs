@@ -83,15 +83,6 @@ namespace Spike.Api
             app.UseMvc();
 
             serviceProvider.ConfigFramework();
-
-            #region 此处可以放置预热代码 
-
-
-            #endregion
-
-            ILogger logger = FrameworkExtensions.LoggerFactory.CreateLogger("Startup");
-
-            logger.LogDebug("测试日志debug");
         }
 
         /// <summary>

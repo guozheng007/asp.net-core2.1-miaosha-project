@@ -8,6 +8,7 @@ using Microsoft.Extensions.PlatformAbstractions;
 
 
 using Newtonsoft.Json.Serialization;
+using Spike.Api.Middle;
 using Spike.Business;
 using Spike.MySQLDB;
 using Spike.RedisDB;
@@ -79,7 +80,8 @@ namespace Spike.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles();//启用静态资源
+            app.UseStaticFiles();
+            app.UseMiddleware<ExceptionHandlerMiddleWare>();
             app.UseMvc();
 
             serviceProvider.ConfigFramework();

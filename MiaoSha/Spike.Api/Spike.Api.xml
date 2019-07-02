@@ -78,6 +78,228 @@
             </summary>
             <param name="id"></param>
         </member>
+        <member name="T:Spike.Api.BusinessException">
+            <summary>
+            包装器业务异常类实现
+            </summary>
+        </member>
+        <member name="M:Spike.Api.BusinessException.#ctor(Spike.Api.ICommonError)">
+            <summary>
+            直接接收EmBusinessError的传参用于构造业务异常
+            </summary>
+            <param name="commonError"></param>
+        </member>
+        <member name="M:Spike.Api.BusinessException.#ctor(Spike.Api.ICommonError,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="commonError"></param>
+            <param name="errMsg"></param>
+        </member>
+        <member name="M:Spike.Api.BusinessException.GetErrCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.BusinessException.GetErrMsg">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.BusinessException.SetErrMsg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.BusinessException.GetCommonError">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Spike.Api.EmBusinessError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Spike.Api.EmBusinessError.parameterValidationError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.EmBusinessError.GetErrCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.EmBusinessError.GetErrMsg">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.EmBusinessError.SetErrCode(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="errCode"></param>
+        </member>
+        <member name="M:Spike.Api.EmBusinessError.SetErrMsg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Spike.Api.Enumeration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Enumeration.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Enumeration.#ctor(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <param name="displayName"></param>
+        </member>
+        <member name="P:Spike.Api.Enumeration.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Spike.Api.Enumeration.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Enumeration.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.GetAll``1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.AbsoluteDifference(Spike.Api.Enumeration,Spike.Api.Enumeration)">
+            <summary>
+            
+            </summary>
+            <param name="firstValue"></param>
+            <param name="secondValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.FromValue``1(System.Int32)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.FromDisplayName``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="displayName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.parse``2(``1,System.String,System.Func{``0,System.Boolean})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="K"></typeparam>
+            <param name="value"></param>
+            <param name="description"></param>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Enumeration.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.ICommonError.GetErrCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.ICommonError.GetErrMsg">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.ICommonError.SetErrMsg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errMsg"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Spike.Api.Middle.ExceptionHandlerMiddleWare">
+            <summary>
+            You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Middle.ExceptionHandlerMiddleWare.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Spike.Api.Middle.ExceptionHandlerMiddleWare.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Spike.Api.Middle.ExceptionHandlerMiddleWareExtensions">
+            <summary>
+            Extension method used to add the middleware to the HTTP request pipeline.
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Middle.ExceptionHandlerMiddleWareExtensions.UseExceptionHandlerMiddleWare(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
         <member name="T:Spike.Api.Program">
             <summary>
             
@@ -95,6 +317,50 @@
             </summary>
             <param name="args"></param>
             <returns></returns>
+        </member>
+        <member name="T:Spike.Api.OperateResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.OperateResult.Create(System.Object)">
+            <summary>
+            定义一个通用的创建方法
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.OperateResult.Create(System.Object,System.String)">
+            <summary>
+            定义一个通用的创建方法
+            </summary>
+            <param name="result"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.OperateResult.GetStatus">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.OperateResult.SetStatus(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="status"></param>
+        </member>
+        <member name="M:Spike.Api.OperateResult.GetData">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.OperateResult.SetData(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
         </member>
         <member name="T:Spike.Api.Startup">
             <summary>

@@ -4,7 +4,7 @@
     {
         public TDestination MapTo<TDestination>(object source)
         {
-            return default;
+            return default(TDestination);
         }
     }
 }

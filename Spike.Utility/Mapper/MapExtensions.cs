@@ -19,7 +19,7 @@
         {
             if (source is null)
             {
-                return default;
+                return default(TDestination);
             }
             return autoMapProvider.MapTo<TDestination>(source);
         }

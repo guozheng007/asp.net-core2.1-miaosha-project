@@ -6,7 +6,7 @@
         {
             if (source == null)
             {
-                return default;
+                return default(TDestination);
             }
 
             return AutoMapper.Mapper.Map<TDestination>(source);

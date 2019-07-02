@@ -16,3 +16,12 @@ F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.Utility\obj\Debug\ne
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.AssemblyInfo.cs
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.dll
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.pdb
+E:\Opensource\MiaoSha\Spike.Utility\bin\Debug\netstandard2.0\Spike.Utility.deps.json
+E:\Opensource\MiaoSha\Spike.Utility\bin\Debug\netstandard2.0\Spike.Utility.dll
+E:\Opensource\MiaoSha\Spike.Utility\bin\Debug\netstandard2.0\Spike.Utility.pdb
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.csprojAssemblyReference.cache
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.csproj.CoreCompileInputs.cache
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.AssemblyInfoInputs.cache
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.AssemblyInfo.cs
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.dll
+E:\Opensource\MiaoSha\Spike.Utility\obj\Debug\netstandard2.0\Spike.Utility.pdb

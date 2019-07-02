@@ -18,3 +18,15 @@ F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DataContracts\obj\De
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.csproj.CopyComplete
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.dll
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.pdb
+E:\Opensource\MiaoSha\Spike.DataContracts\bin\Debug\netstandard2.0\Spike.DataContracts.deps.json
+E:\Opensource\MiaoSha\Spike.DataContracts\bin\Debug\netstandard2.0\Spike.DataContracts.dll
+E:\Opensource\MiaoSha\Spike.DataContracts\bin\Debug\netstandard2.0\Spike.DataContracts.pdb
+E:\Opensource\MiaoSha\Spike.DataContracts\bin\Debug\netstandard2.0\Spike.BO.dll
+E:\Opensource\MiaoSha\Spike.DataContracts\bin\Debug\netstandard2.0\Spike.BO.pdb
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.csprojAssemblyReference.cache
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.csproj.CoreCompileInputs.cache
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.AssemblyInfoInputs.cache
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.AssemblyInfo.cs
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.csproj.CopyComplete
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.dll
+E:\Opensource\MiaoSha\Spike.DataContracts\obj\Debug\netstandard2.0\Spike.DataContracts.pdb

@@ -15,3 +15,12 @@ F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DTO\obj\Debug\netsta
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.AssemblyInfo.cs
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.dll
 F:\OPenSource\asp.net-core2.1-miaosha-project\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.pdb
+E:\Opensource\MiaoSha\Spike.DTO\bin\Debug\netstandard2.0\Spike.DTO.deps.json
+E:\Opensource\MiaoSha\Spike.DTO\bin\Debug\netstandard2.0\Spike.DTO.dll
+E:\Opensource\MiaoSha\Spike.DTO\bin\Debug\netstandard2.0\Spike.DTO.pdb
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.csprojAssemblyReference.cache
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.csproj.CoreCompileInputs.cache
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.AssemblyInfoInputs.cache
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.AssemblyInfo.cs
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.dll
+E:\Opensource\MiaoSha\Spike.DTO\obj\Debug\netstandard2.0\Spike.DTO.pdb

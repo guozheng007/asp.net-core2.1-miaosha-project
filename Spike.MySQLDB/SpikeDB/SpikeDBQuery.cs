@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Spike.DataContracts;
+using Spike.Utility.Mysql;
 
 namespace Spike.MySQLDB.SpikeDB
 {
-    class SpikeDBQuery
+    public class SpikeDBQuery: MySqlBase,ISpikeDBQueryRepository
     {
+
     }
 }

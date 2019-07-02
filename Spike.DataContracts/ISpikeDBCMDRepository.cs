@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Spike.DataContracts
 {
-    public interface IMySqlCMDRepository
+    public interface ISpikeDBCMDRepository
     {
         /// <summary>
         /// 增加

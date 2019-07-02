@@ -7,7 +7,7 @@ using Spike.Utility.Mysql;
 
 namespace Spike.MySQLDB.SpikeDB
 {
-    public class SpikeDBCMD : MySqlBase, IMySqlCMDRepository
+    public class SpikeDBCMD : MySqlBase, ISpikeDBCMDRepository
     {
         public long Create(OrderModel entity)
         {

@@ -11,6 +11,7 @@ namespace Spike.Business
         public static IServiceCollection AddBusinessServices(this IServiceCollection services)
         {
             //注入service
+            services.AddSingleton<BusinessFacade, BusinessFacade>();
 
             ObjectMapperWapper.Initialize();
 

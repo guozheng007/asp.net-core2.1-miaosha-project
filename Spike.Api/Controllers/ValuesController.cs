@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Spike.Business;
 using Spike.Utility;
 
 namespace Spike.Api.Controllers
@@ -16,9 +17,11 @@ namespace Spike.Api.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ILogger _logger ;
-        public ValuesController(ILogger<ValuesController> logger)
+        private readonly BusinessFacade _businessFacade;
+        public ValuesController(BusinessFacade businessFacade)
         {
             this._logger = FrameworkExtensions.LoggerFactory.CreateLogger<ValuesController>();
+            this._businessFacade = businessFacade;
         }
 
         /// <summary>
@@ -34,7 +37,11 @@ namespace Spike.Api.Controllers
             _logger.LogError("异常错误");
             _logger.LogWarning("警告");
             _logger.LogTrace("追踪");
+            
             var tmp = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
+            string AppID = ConfigurationManager.Configuration["section:section0:key:AppID"];
+            string EncryptKey = ConfigurationManager.Configuration["section:section0:key:EncryptKey"];
+
             return new string[] { "value1", "value2" };
         }
 

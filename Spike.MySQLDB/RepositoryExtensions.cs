@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
+
+using Spike.DataContracts;
+using Spike.MySQLDB.SpikeDB;
 
 namespace Spike.MySQLDB
 {
@@ -9,8 +10,9 @@ namespace Spike.MySQLDB
     {
         public static IServiceCollection AddMySQLRepository(this IServiceCollection services)
         {
-            //services.AddSingleton<ISqlExampleRepository, MySqlExampleRepository>(); //示例
-            //services.AddSingleton<INoSqlExampleRepository, MongoDbExampleRepository>(); //示例
+            services.AddSingleton<ISpikeDBCMDRepository, SpikeDBCMD>();
+            services.AddSingleton<ISpikeDBQueryRepository, SpikeDBQuery>();
+            services.AddSingleton<SpikeDBFacade, SpikeDBFacade>();
 
             return services;
         }

@@ -49,7 +49,9 @@ namespace Spike.Api
                     .AddRedisRepository()
                     .AddBusinessServices();
 
-            services.AddMvc()
+            services.AddMvc(options=> {
+                    options.Conventions.Insert(0, new NameSpaceVersionRoutingConvention());
+                })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options=> {
 

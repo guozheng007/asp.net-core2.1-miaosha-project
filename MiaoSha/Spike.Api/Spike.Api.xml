@@ -4,38 +4,75 @@
         <name>Spike.Api</name>
     </assembly>
     <members>
-        <member name="T:Spike.Api.Controllers.ValuesController">
+        <member name="T:Spike.Api.Controllers.v1.ValuesController">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Spike.Api.Controllers.ValuesController.Get">
+        <member name="M:Spike.Api.Controllers.v1.ValuesController.Get">
             <summary>
              GET api/values
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Spike.Api.Controllers.ValuesController.Get(System.Int32)">
+        <member name="M:Spike.Api.Controllers.v1.ValuesController.Get(System.Int32)">
             <summary>
             GET api/values/5
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Spike.Api.Controllers.ValuesController.Post(System.String)">
+        <member name="M:Spike.Api.Controllers.v1.ValuesController.Post(System.String)">
             <summary>
             POST api/values
             </summary>
             <param name="value"></param>
         </member>
-        <member name="M:Spike.Api.Controllers.ValuesController.Put(System.Int32,System.String)">
+        <member name="M:Spike.Api.Controllers.v1.ValuesController.Put(System.Int32,System.String)">
             <summary>
             PUT api/values/5
             </summary>
             <param name="id"></param>
             <param name="value"></param>
         </member>
-        <member name="M:Spike.Api.Controllers.ValuesController.Delete(System.Int32)">
+        <member name="M:Spike.Api.Controllers.v1.ValuesController.Delete(System.Int32)">
+            <summary>
+            DELETE api/values/5
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Spike.Api.Controllers.v2.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Spike.Api.Controllers.v2.ValuesController.Get">
+            <summary>
+             GET api/values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Controllers.v2.ValuesController.Get(System.Int32)">
+            <summary>
+            GET api/values/5
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Spike.Api.Controllers.v2.ValuesController.Post(System.String)">
+            <summary>
+            POST api/values
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Spike.Api.Controllers.v2.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            PUT api/values/5
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Spike.Api.Controllers.v2.ValuesController.Delete(System.Int32)">
             <summary>
             DELETE api/values/5
             </summary>
@@ -95,6 +132,23 @@
             注入的实现ISwaggerProvider使用默认设置
             </summary>
             <param name="services"></param>
+        </member>
+        <member name="T:Spike.Api.NameSpaceVersionRoutingConvention">
+            <summary>
+            api version control
+            </summary>
+        </member>
+        <member name="M:Spike.Api.NameSpaceVersionRoutingConvention.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiPrefix"></param>
+        </member>
+        <member name="M:Spike.Api.NameSpaceVersionRoutingConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ApplicationModel)">
+            <summary>
+            
+            </summary>
+            <param name="application"></param>
         </member>
     </members>
 </doc>

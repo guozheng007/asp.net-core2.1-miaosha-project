@@ -7,17 +7,18 @@ using Microsoft.Extensions.Logging;
 using Spike.Business;
 using Spike.Utility;
 
-namespace Spike.Api.Controllers
+namespace Spike.Api.Controllers.v1
 {
     /// <summary>
     /// 
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[Action]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
         private readonly ILogger _logger ;
         private readonly BusinessFacade _businessFacade;
+
         public ValuesController(BusinessFacade businessFacade)
         {
             this._logger = FrameworkExtensions.LoggerFactory.CreateLogger<ValuesController>();

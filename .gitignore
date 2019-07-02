@@ -3,3 +3,14 @@
 ################################################################################
 
 /.vs/MiaoSha/v16/Server/sqlite3
+/.vs/MiaoSha/DesignTimeBuild
+/Spike.Api/obj
+/Spike.BO/obj
+/Spike.Business/obj
+/Spike.DataContracts/obj
+/Spike.DTO/obj
+/Spike.Entity/obj
+/Spike.IBusiness/obj
+/Spike.MySQLDB/obj
+/Spike.RedisDB/obj
+/Spike.Utility/obj

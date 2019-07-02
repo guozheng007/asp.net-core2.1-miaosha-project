@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Reflection;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace Spike.Utility
 {
@@ -20,7 +15,7 @@ namespace Spike.Utility
             string strValue = enumSubitem.ToString();
             FieldInfo fieldinfo = enumSubitem.GetType().GetField(strValue);
             Object[] objs = fieldinfo.GetCustomAttributes(typeof(DescriptionAttribute), false);
-            if (objs == null || objs.Length == 0)
+            if (objs is null || objs.Length == 0)
             {
                 return strValue;
             }

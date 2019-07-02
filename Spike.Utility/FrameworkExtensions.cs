@@ -6,8 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Spike.Utility.Mapper;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Spike.Utility
 {
@@ -27,7 +25,8 @@ namespace Spike.Utility
         {
             services.AddSingleton(customConfiguration);
             services.AddSingleton<IMapProvider, MapperAdapter>();
-            services.AddLogging(logBuilder => {
+            services.AddLogging(logBuilder =>
+            {
 
                 logBuilder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Information);
             });
@@ -62,10 +61,10 @@ namespace Spike.Utility
             {
                 configBuilder.SetBasePath(AppContext.BaseDirectory)
                              .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                             .AddXmlFile("Config/Database.Dev.config", optional:false, reloadOnChange:true)
-                             .AddXmlFile("Config/AppSetting.Dev.config", optional:false, reloadOnChange:true)
+                             .AddXmlFile("Config/Database.Dev.config", optional: false, reloadOnChange: true)
+                             .AddXmlFile("Config/AppSetting.Dev.config", optional: false, reloadOnChange: true)
                              .AddEnvironmentVariables();
-                
+
 
                 hostContext.Configuration = configBuilder.Build();
 

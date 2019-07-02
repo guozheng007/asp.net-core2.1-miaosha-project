@@ -1,19 +1,15 @@
-﻿using System;
+﻿using Dapper;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-
-
-using Dapper;
-using MySql.Data.MySqlClient;
 
 namespace Spike.Utility.Mysql
 {
     public class MySqlBase
     {
         /// <summary>
-        ///     根据数据库名获取连接
+        /// 根据数据库名获取连接
         /// </summary>
         /// <param name="databaseName"></param>
         /// <returns></returns>
@@ -25,7 +21,7 @@ namespace Spike.Utility.Mysql
         }
 
         /// <summary>
-        ///     ExecuteScalar
+        /// ExecuteScalar
         /// </summary>
         /// <returns></returns>
         protected T ExecuteScalar<T>(string connStr, string sql, object param = null)
@@ -51,7 +47,7 @@ namespace Spike.Utility.Mysql
         }
 
         /// <summary>
-        ///     QueryList
+        ///  QueryList
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="connStr"></param>
@@ -67,7 +63,7 @@ namespace Spike.Utility.Mysql
         }
 
         /// <summary>
-        ///     Query
+        ///  Query
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="connStr"></param>

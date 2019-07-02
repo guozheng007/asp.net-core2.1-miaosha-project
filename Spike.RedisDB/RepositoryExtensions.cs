@@ -9,8 +9,7 @@ namespace Spike.RedisDB
     {
         public static IServiceCollection AddRedisRepository(this IServiceCollection services)
         {
-            //services.AddSingleton<ISqlExampleRepository, MySqlExampleRepository>(); //示例
-            //services.AddSingleton<INoSqlExampleRepository, MongoDbExampleRepository>(); //示例
+            
 
             return services;
         }

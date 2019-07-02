@@ -20,9 +20,12 @@ namespace Spike.Utility
             byte[] kb = Encoding.Default.GetBytes(key);
 
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider();
-            des.Key = md5.ComputeHash(kb);
-            des.Mode = CipherMode.ECB;
+            TripleDESCryptoServiceProvider des = new TripleDESCryptoServiceProvider
+            {
+                Key = md5.ComputeHash(kb),
+                Mode = CipherMode.ECB
+            };
+
             byte[] decryptBytes = des.CreateDecryptor().TransformFinalBlock(buff, 0, buff.Length);
 
             return Encoding.Default.GetString(decryptBytes);

@@ -1,15 +1,13 @@
 ﻿using AutoMapper;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Spike.Utility.Mapper
 {
-    public class ObjectMapperWapper: Profile
+    public class ObjectMapperWapper : Profile
     {
         public ObjectMapperWapper()
         {
-           
+            //TODO
         }
 
         private DateTime ConvertTime(long timestamp)

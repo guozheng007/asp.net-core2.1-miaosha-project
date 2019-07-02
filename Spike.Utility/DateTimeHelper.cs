@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Spike.Utility
 {
@@ -12,10 +10,10 @@ namespace Spike.Utility
 
             if (milliseconds)
             {
-                return dateTime.AddMilliseconds((double)unixTime);
+                return dateTime.AddMilliseconds(unixTime);
             }
 
-            return dateTime.AddSeconds((double)unixTime);
+            return dateTime.AddSeconds(unixTime);
         }
     }
 }

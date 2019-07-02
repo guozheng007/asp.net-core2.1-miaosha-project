@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Spike.RedisDB
 {
-    class ConnectionString
+    public class ConnectionString
     {
+
     }
 }

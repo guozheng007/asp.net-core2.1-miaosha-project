@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Spike.Utility.Mapper
+﻿namespace Spike.Utility.Mapper
 {
     public static class MapExtensions
     {
@@ -23,7 +19,7 @@ namespace Spike.Utility.Mapper
         {
             if (source is null)
             {
-                return default(TDestination);
+                return default;
             }
             return autoMapProvider.MapTo<TDestination>(source);
         }

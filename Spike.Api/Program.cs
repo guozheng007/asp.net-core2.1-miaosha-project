@@ -28,7 +28,8 @@ namespace Spike.Api
         /// <returns></returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .ConfigureLogging(logging => {
+                .ConfigureLogging(logging =>
+                {
 
                     logging.AddFilter("System", LogLevel.Warning);
                     logging.AddFilter("Microsoft", LogLevel.Warning);

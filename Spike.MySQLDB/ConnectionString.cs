@@ -9,8 +9,8 @@ namespace Spike.MySQLDB
 {
     public class ConnectionString
     {
-        public readonly static string TripOrderDBSelect = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
-        public readonly static string TripOrderDBInsert = ConfigurationManager.Configuration["add:SpikeDB_INSERT:connectionString"];
+        private readonly static string TripOrderDBSelect = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
+        private readonly static string TripOrderDBInsert = ConfigurationManager.Configuration["add:SpikeDB_INSERT:connectionString"];
 
         /// <summary>
         /// TripOrderDB库读链接

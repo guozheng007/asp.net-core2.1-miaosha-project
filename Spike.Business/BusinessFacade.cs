@@ -1,7 +1,4 @@
 ﻿using Spike.DataContracts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Spike.Business
 {
@@ -11,9 +8,9 @@ namespace Spike.Business
 
         public BusinessFacade(ISpikeDBCMDRepository spikeDBCMDRepository)
         {
-            this._spikeDBCMDRepository = spikeDBCMDRepository;
+            _spikeDBCMDRepository = spikeDBCMDRepository;
         }
 
-         
+
     }
 }

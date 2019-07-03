@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Spike.Api.Middle
 {
@@ -62,14 +63,12 @@ namespace Spike.Api.Middle
             {
                 var businessException = (BusinessException)exception;
 
-                var errModel = new { errCode = businessException.GetErrCode(), errMsg = businessException.GetErrMsg() };
+                var errModel = new ErrorModel { ErrorCode = businessException.GetErrCode(), ErrorMsg = businessException.GetErrMsg() };
 
-                result = OperateResult.Create(errModel, "fail");
-
-
+                result = OperateResult.Create(JObject.FromObject(errModel), "fail");
             }
 
-            await response.WriteAsync(JsonConvert.SerializeObject(new { data = result.GetData(), status = result.GetStatus() })).ConfigureAwait(false);
+            await response.WriteAsync(JsonConvert.SerializeObject(JObject.FromObject(result))).ConfigureAwait(false);
         }
     }
 

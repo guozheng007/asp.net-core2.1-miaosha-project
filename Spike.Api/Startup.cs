@@ -5,8 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
-
-
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Spike.Api.Middle;
 using Spike.Business;
@@ -21,12 +20,12 @@ using System.Reflection;
 namespace Spike.Api
 {
     /// <summary>
-    /// 
+    /// 启动配置类
     /// </summary>
     public class Startup
     {
         /// <summary>
-        /// 
+        /// 构造函数 
         /// </summary>
         /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
@@ -35,7 +34,7 @@ namespace Spike.Api
         }
 
         /// <summary>
-        /// 
+        /// 配置
         /// </summary>
         public IConfiguration Configuration { get; }
 
@@ -50,15 +49,19 @@ namespace Spike.Api
                     .AddRedisRepository()
                     .AddBusinessServices();
 
-            services.AddMvc(options=> {
-                    options.Conventions.Insert(0, new NameSpaceVersionRoutingConvention());
-                })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                .AddJsonOptions(options=> {
+            services.AddMvc(options =>
+            {
+                options.Conventions.Insert(0, new NameSpaceVersionRoutingConvention());
+            })
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //.AddJsonOptions(op=> {
+            //    //op.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //});
 
-                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-                });
-
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            };
 
             AddSwaggerService(services);
         }
@@ -81,7 +84,7 @@ namespace Spike.Api
             }
 
             app.UseStaticFiles();
-            app.UseMiddleware<ExceptionHandlerMiddleWare>();
+            app.UseExceptionHandlerMiddleWare();
             app.UseMvc();
 
             serviceProvider.ConfigFramework();

@@ -29,7 +29,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Spike.Business\Spike.Business.csproj" />
     <ProjectReference Include="..\Spike.DTO\Spike.DTO.csproj" />
-    <ProjectReference Include="..\Spike.IBusiness\Spike.IBusiness.csproj" />
     <ProjectReference Include="..\Spike.Utility\Spike.Utility.csproj" />
   </ItemGroup>
 

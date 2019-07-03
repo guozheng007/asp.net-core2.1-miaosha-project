@@ -48,7 +48,7 @@ namespace Spike.Api.Controllers.v1
             string AppID = ConfigurationManager.Configuration["section:section0:key:AppID"];
             string EncryptKey = ConfigurationManager.Configuration["section:section0:key:EncryptKey"];
 
-            throw new BusinessException(EmBusinessError.parameterValidationError, "用户名称不能为空");
+            //throw new BusinessException(EmBusinessError.parameterValidationError, "用户名称不能为空");
 
             return new string[] { "value1", "value2" };
         }

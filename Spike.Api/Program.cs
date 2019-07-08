@@ -33,7 +33,7 @@ namespace Spike.Api
 
                     logging.AddFilter("System", LogLevel.Warning);
                     logging.AddFilter("Microsoft", LogLevel.Warning);
-                    logging.AddLog4Net(@"Config\log4net.config");
+                    logging.AddLog4Net();
                 })
                 .UseDefaultWebPreStart()
                 .UseStartup<Startup>();

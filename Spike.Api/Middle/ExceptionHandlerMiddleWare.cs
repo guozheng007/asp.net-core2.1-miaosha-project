@@ -59,7 +59,7 @@ namespace Spike.Api.Middle
             var result = new OperateResult();
 
 
-            if (exception is BusinessException)
+            if (exception as BusinessException is null)
             {
                 var businessException = (BusinessException)exception;
 

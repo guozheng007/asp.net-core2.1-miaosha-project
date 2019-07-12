@@ -19,6 +19,10 @@ namespace Spike.Api.Controllers.v2
         private readonly ILogger _logger ;
         private readonly BusinessFacade _businessFacade;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="businessFacade"></param>
         public ValuesController(BusinessFacade businessFacade)
         {
             this._logger = FrameworkExtensions.LoggerFactory.CreateLogger<ValuesController>();
@@ -39,9 +43,9 @@ namespace Spike.Api.Controllers.v2
             _logger.LogWarning("警告");
             _logger.LogTrace("追踪");
             
-            var tmp = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
-            string AppID = ConfigurationManager.Configuration["section:section0:key:AppID"];
-            string EncryptKey = ConfigurationManager.Configuration["section:section0:key:EncryptKey"];
+            //var tmp = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
+            //string AppID = ConfigurationManager.Configuration["section:section0:key:AppID"];
+            //string EncryptKey = ConfigurationManager.Configuration["section:section0:key:EncryptKey"];
 
             return new string[] { "value1", "value2" };
         }

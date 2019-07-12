@@ -10,7 +10,7 @@ namespace Spike.Api
     /// </summary>
     public class BusinessException : Exception, ICommonError
     {
-        private ICommonError commonError;
+        private readonly ICommonError commonError;
 
         /// <summary>
         /// 直接接收EmBusinessError的传参用于构造业务异常

@@ -177,6 +177,94 @@ namespace Spike.Api
             return Value.CompareTo(((Enumeration)obj).Value);
         }
 
-       
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static int Compare(Enumeration left, Enumeration right)
+        {
+            if (object.ReferenceEquals(left, right))
+            {
+                return 0;
+            }
+            if (object.ReferenceEquals(left, null))
+            {
+                return -1;
+            }
+            return left.CompareTo(right);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator ==(Enumeration left, Enumeration right)
+        {
+            if (object.ReferenceEquals(left, null))
+            {
+                return object.ReferenceEquals(right, null);
+            }
+            return left.Equals(right);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator !=(Enumeration left, Enumeration right)
+        {
+            return !(left == right);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator <(Enumeration left, Enumeration right)
+        {
+            return (Compare(left, right) < 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator >(Enumeration left, Enumeration right)
+        {
+            return (Compare(left, right) > 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator <= (Enumeration left, Enumeration right)
+        {
+            return (Compare(left, right) < 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="left"></param>
+        /// <param name="right"></param>
+        /// <returns></returns>
+        public static bool operator >=(Enumeration left, Enumeration right)
+        {
+            return (Compare(left, right) > 0);
+        }
+
     }
 }

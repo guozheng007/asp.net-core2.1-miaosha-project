@@ -17,16 +17,14 @@ namespace Spike.Api.Controllers.v2
     public class ValuesController : ControllerBase
     {
         private readonly ILogger _logger ;
-        private readonly BusinessFacade _businessFacade;
+        
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="businessFacade"></param>
-        public ValuesController(BusinessFacade businessFacade)
+        public ValuesController()
         {
             this._logger = FrameworkExtensions.LoggerFactory.CreateLogger<ValuesController>();
-            this._businessFacade = businessFacade;
         }
 
         /// <summary>
@@ -43,50 +41,8 @@ namespace Spike.Api.Controllers.v2
             _logger.LogWarning("警告");
             _logger.LogTrace("追踪");
             
-            //var tmp = ConfigurationManager.Configuration["add:SpikeDB_SELECT:connectionString"];
-            //string AppID = ConfigurationManager.Configuration["section:section0:key:AppID"];
-            //string EncryptKey = ConfigurationManager.Configuration["section:section0:key:EncryptKey"];
 
             return new string[] { "value1", "value2" };
-        }
-
-        /// <summary>
-        /// GET api/values/5
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        /// <summary>
-        /// POST api/values
-        /// </summary>
-        /// <param name="value"></param>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        /// <summary>
-        /// PUT api/values/5
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="value"></param>
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        /// <summary>
-        /// DELETE api/values/5
-        /// </summary>
-        /// <param name="id"></param>
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

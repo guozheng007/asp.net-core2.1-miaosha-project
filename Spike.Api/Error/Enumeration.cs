@@ -9,7 +9,7 @@ namespace Spike.Api
     /// <summary>
     /// 
     /// </summary>
-    public class Enumeration: IComparable
+    public class Enumeration : IComparable
     {
         private readonly int _value;
         private readonly string _displayName;
@@ -128,7 +128,7 @@ namespace Spike.Api
         /// <returns></returns>
         public static T FromValue<T>(int value) where T : Enumeration, new()
         {
-            var matchingItem = parse<T, int>(value, "value", item => item.Value == value);
+            var matchingItem = Parse<T, int>(value, "value", item => item.Value == value);
             return matchingItem;
         }
 
@@ -140,7 +140,7 @@ namespace Spike.Api
         /// <returns></returns>
         public static T FromDisplayName<T>(string displayName) where T : Enumeration, new()
         {
-            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName == displayName);
+            var matchingItem = Parse<T, string>(displayName, "display name", item => item.DisplayName == displayName);
             return matchingItem;
         }
 
@@ -153,14 +153,15 @@ namespace Spike.Api
         /// <param name="description"></param>
         /// <param name="predicate"></param>
         /// <returns></returns>
-        private static T parse<T, K>(K value, string description, Func<T, bool> predicate) where T : Enumeration, new()
+        private static T Parse<T, K>(K value, string description, Func<T, bool> predicate) where T : Enumeration, new()
         {
             var matchingItem = GetAll<T>().FirstOrDefault(predicate);
 
             if (matchingItem == null)
             {
                 var message = string.Format("'{0}' is not a valid {1} in {2}", value, description, typeof(T));
-                throw new ApplicationException(message);
+
+                throw new BusinessException(EmBusinessError.enumNotFound, message);
             }
 
             return matchingItem;
@@ -169,11 +170,13 @@ namespace Spike.Api
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="obj"></param>
         /// <returns></returns>
-        public int CompareTo(object other)
+        public int CompareTo(object obj)
         {
-            return Value.CompareTo(((Enumeration)other).Value);
+            return Value.CompareTo(((Enumeration)obj).Value);
         }
+
+       
     }
 }

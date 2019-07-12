@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Spike.Api
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ICommonError
     {
         /// <summary>

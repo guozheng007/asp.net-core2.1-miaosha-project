@@ -54,10 +54,7 @@ namespace Spike.Api
                 options.Conventions.Insert(0, new NameSpaceVersionRoutingConvention());
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            //.AddJsonOptions(op=> {
-            //    //op.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            //});
-
+            
             JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()

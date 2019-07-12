@@ -6,22 +6,27 @@ using System.Threading.Tasks;
 namespace Spike.Api
 {
     /// <summary>
-    /// 
+    /// 枚举类
     /// </summary>
     public class EmBusinessError : Enumeration, ICommonError
     {
         private int errCode;
-        private String errMsg;
+        private string errMsg;
 
         /// <summary>
-        /// 
+        /// 参数不合法
         /// </summary>
         public static readonly EmBusinessError parameterValidationError = new EmBusinessError(10001, "参数不合法");
-
-        private EmBusinessError() { throw new Exception("私有构造函数不能调用"); }
+        /// <summary>
+        /// 不存在该枚举
+        /// </summary>
+        public static readonly EmBusinessError enumNotFound = new EmBusinessError(10002,"不存在该枚举");
+        /// <summary>
+        /// 私有构造函数不允许调用
+        /// </summary>
+        public static readonly EmBusinessError privateConstructor = new EmBusinessError(10003, "私有构造函数不允许调用");
         private EmBusinessError(int value, string displayName) : base(value, displayName)
         {
-
             this.errCode = value;
             this.errMsg = displayName;
         }

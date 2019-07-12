@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
 namespace Spike.Api
@@ -8,6 +9,7 @@ namespace Spike.Api
     /// <summary>
     /// 包装器业务异常类实现
     /// </summary>
+    [Serializable]
     public class BusinessException : Exception, ICommonError
     {
         private readonly ICommonError commonError;

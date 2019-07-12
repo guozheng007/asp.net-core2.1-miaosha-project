@@ -48,3 +48,4 @@ bld/
 /Spike.MySQLDB/obj
 /Spike.RedisDB/obj
 /Spike.Utility/obj
+/Spike.Api/Properties/PublishProfiles/FolderProfile.pubxml
